@@ -1,0 +1,5 @@
+DATE=$(date '+%Y-%m-%d')
+./bin/lmd $1 > output/$DATE.md
+cp output/$DATE.md ~/code/work-log
+cd ~/code/work-log
+git add . && git commit -m "$DATE log" && git push
